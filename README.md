@@ -1,11 +1,11 @@
- Q1 — Polynomial Regression of Trajectory Data
+ ### Q1 — Polynomial Regression of Trajectory Data
 
 In this task, a two-dimensional trajectory dataset was modelled using polynomial basis function regression. The temporal variable was mapped to both spatial coordinates (x and y), and a polynomial design matrix was constructed to enable nonlinear regression via linear least squares estimation. Model parameters were obtained using the pseudo-inverse solution. The results demonstrate that increasing the polynomial order improves the ability of the model to capture the underlying trajectory structure. However, excessive model complexity may lead to overfitting, indicating a trade-off between model flexibility and generalisation performance.
 
- Q2 — Basis Function Selection and Nonlinear Regression
+### Q2 — Basis Function Selection and Nonlinear Regression
 
 This task investigated the use of tailored basis function expansions for modelling nonlinear datasets. For Q2a, a combination of linear and trigonometric basis functions was selected to represent both trend and periodic components of the data. For Q2b, exponential and trigonometric functions were combined to capture growth dynamics alongside oscillatory behaviour. The model parameters were estimated using least squares, and hyperparameters were optimised via grid search. The results indicate that appropriate selection of basis functions enables accurate approximation of complex data structures using relatively low-dimensional representations, as reflected by the achieved low mean squared error values.
 
- Q3 — Principal Component Analysis of 3D Blood Vessel Shapes
+### Q3 — Principal Component Analysis of 3D Blood Vessel Shapes
 
 Principal Component Analysis (PCA) was applied to a dataset of 3D blood vessel shapes in order to investigate its underlying low-dimensional structure. The analysis was first implemented manually via covariance matrix eigendecomposition, followed by dimensionality reduction and reconstruction using a reduced number of principal components. The reconstructed shapes exhibited strong agreement with the original data, indicating that the majority of variance is captured within a small subset of eigenvectors. Subsequently, PCA was performed using the scikit-learn implementation, and results were compared. The eigenvalues and reconstructed outputs from both methods showed near-identical behaviour, with only minor discrepancies attributable to numerical precision and differences in algorithmic implementation (SVD-based vs eigendecomposition). These findings confirm that the dataset resides in a low-dimensional subspace and that PCA provides an effective dimensionality reduction framework for shape representation.
